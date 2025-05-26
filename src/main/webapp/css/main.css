@@ -1,0 +1,854 @@
+/* 全局样式 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1b2838;
+    color: #c6d4df;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Steam风格导航栏 */
+.steam-header {
+    background-color: #171a21;
+    width: 100%;
+}
+
+.global-header {
+    background: linear-gradient(90deg, #417a9b 0%, #2a475e 50%);
+    height: 104px;
+    position: relative;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.header-logo {
+    margin-right: 40px;
+}
+
+.header-logo img {
+    height: 44px;
+}
+
+.header-navigation {
+    display: flex;
+    height: 100%;
+}
+
+.header-navigation .menu-item {
+    color: #e5e5e5;
+    font-size: 14px;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.header-navigation .menu-item:hover {
+    color: #66c0f4;
+}
+
+.header-actions {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+/* 搜索框样式 */
+.search-container {
+    position: relative;
+    margin-right: 20px;
+}
+
+.search-box {
+    background-color: #316282;
+    border: 1px solid #1a3954;
+    padding: 8px 12px;
+    width: 200px;
+    border-radius: 3px;
+    color: white;
+    font-size: 14px;
+}
+
+.search-box::placeholder {
+    color: #acbbc7;
+}
+
+.search-btn {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #c6d4df;
+    cursor: pointer;
+}
+
+/* 用户头像与下拉菜单 */
+.user-dropdown {
+    position: relative;
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.user-dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.user-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 2px;
+    overflow: hidden;
+    margin-right: 8px;
+    border: 2px solid #66c0f4;
+}
+
+.user-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.username {
+    color: #c6d4df;
+    font-size: 14px;
+    max-width: 120px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 200px;
+    background-color: #171a21;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    border: 1px solid #2a475e;
+    z-index: 1000;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 12px 15px;
+    color: #c6d4df;
+    font-size: 14px;
+    border-bottom: 1px solid #2a475e;
+}
+
+.dropdown-content a:hover {
+    background-color: #2a475e;
+}
+
+.dropdown-content .logout-link {
+    color: #ff6a6a;
+}
+
+/* 购物车按钮 */
+.cart-btn {
+    background-color: #316282;
+    width: 32px;
+    height: 32px;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    position: relative;
+}
+
+.cart-btn:hover {
+    background-color: #3b7ca8;
+}
+
+.cart-count {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: #5c7e10;
+    color: white;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
+
+/* 登录按钮 */
+.login-btn {
+    background-color: #5c7e10;
+    color: white;
+    padding: 6px 15px;
+    border-radius: 2px;
+    font-size: 14px;
+    transition: background-color 0.2s;
+}
+
+.login-btn:hover {
+    background-color: #6d9412;
+}
+
+/* 商店导航 */
+.store-nav {
+    background-color: #2a475e;
+    height: 36px;
+}
+
+.store-nav-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    height: 100%;
+    display: flex;
+}
+
+.store-nav .tab {
+    color: #c6d4df;
+    padding: 0 15px;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    position: relative;
+    white-space: nowrap;
+}
+
+.store-nav .tab:hover {
+    background-color: #3a6a8a;
+    color: white;
+}
+
+/* Steam页脚样式 */
+.steam-footer {
+    background-color: #171a21;
+    padding: 40px 0 20px;
+    margin-top: 50px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.footer-logo {
+    text-align: center;
+    position: relative;
+}
+
+.footer-logo img {
+    height: 40px;
+}
+
+.footer-separator {
+    height: 1px;
+    background-color: #363c44;
+    margin: 20px auto;
+    width: 100%;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.footer-links-group {
+    margin-right: 30px;
+}
+
+.footer-links-group h4 {
+    color: #8f98a0;
+    font-size: 14px;
+    margin-bottom: 10px;
+    font-weight: normal;
+    letter-spacing: 0.5px;
+}
+
+.footer-links-group a {
+    display: block;
+    color: #c6d4df;
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+.footer-links-group a:hover {
+    color: #66c0f4;
+}
+
+.footer-valve-logo img {
+    height: 25px;
+    opacity: 0.7;
+}
+
+.footer-legal {
+    padding-top: 20px;
+    border-top: 1px solid #363c44;
+}
+
+.footer-legal-info {
+    color: #8f98a0;
+    font-size: 12px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.footer-legal-links {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 12px;
+    color: #c6d4df;
+}
+
+.footer-legal-links a {
+    color: #c6d4df;
+    margin-right: 5px;
+}
+
+.footer-legal-links .separator {
+    margin: 0 5px;
+    color: #4c5d6a;
+}
+
+/* 轮播图样式优化 */
+#featured-carousel {
+    margin-bottom: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#featured-carousel .carousel-item {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+}
+
+#featured-carousel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 保持图片比例的同时填满容器 */
+    object-position: center; /* 居中显示图片 */
+    filter: brightness(0.8); /* 稍微调暗图片以便文字更易读 */
+}
+
+.carousel-caption {
+    position: absolute;
+    bottom: 20%;
+    left: 10%;
+    max-width: 50%;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 5px;
+    text-align: left;
+}
+
+.carousel-caption h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #fff;
+    font-weight: 400;
+}
+
+.carousel-caption p {
+    font-size: 14px;
+    color: #ccc;
+    line-height: 1.5;
+}
+
+/* 游戏列表部分 */
+.games-section {
+    margin-bottom: 30px;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #3a506a;
+}
+
+.section-title {
+    font-size: 22px;
+    margin: 0;
+    color: #c6d4df;
+    font-weight: normal;
+}
+
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* 游戏卡片样式 */
+.game-card {
+    background-color: #16202d;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: transform 0.2s;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.game-card:hover {
+    transform: translateY(-5px);
+}
+
+.game-image {
+    position: relative;
+    width: 100%;
+    padding-top: 46.7%; /* 维持Steam比例 460:215 */
+    overflow: hidden;
+}
+
+.game-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+/* 鼠标悬停效果 */
+.game-card:hover .game-image img {
+    transform: scale(1.05);
+}
+
+.game-info {
+    padding: 15px;
+}
+
+.game-title {
+    font-size: 16px;
+    margin: 0 0 10px;
+    color: #c6d4df;
+    font-weight: normal;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.game-price {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.original-price {
+    text-decoration: line-through;
+    color: #7193a6;
+    margin-right: 8px;
+    font-size: 12px;
+}
+
+.current-price {
+    color: #b8e6f2;
+    font-size: 14px;
+}
+
+/* 折扣标签样式 */
+.discount-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #4c6b22;
+    color: #a4d007;
+    padding: 2px 8px;
+    font-weight: bold;
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+/* 分页样式 */
+.pagination {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.pagination ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.pagination li {
+    margin: 0 5px;
+}
+
+.pagination a {
+    display: block;
+    padding: 8px 15px;
+    background-color: #2a475e;
+    color: #c6d4df;
+    border-radius: 3px;
+    transition: background-color 0.2s;
+}
+
+.pagination a:hover {
+    background-color: #3a6485;
+}
+
+.pagination li.active a {
+    background-color: #62a7c6;
+    color: #ffffff;
+}
+
+/* 游戏详情页样式 */
+.game-details-page {
+    background-color: #1b2838;
+}
+
+.game-details-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.game-title-section {
+    margin-bottom: 20px;
+}
+
+.game-title-section h1 {
+    font-size: 26px;
+    margin: 0;
+    color: #ffffff;
+    font-weight: 400;
+}
+
+.game-details-main {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.game-media-purchase {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+}
+
+@media (max-width: 768px) {
+    .game-media-purchase {
+        grid-template-columns: 1fr;
+    }
+}
+
+.game-media {
+    background-color: #16202d;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.game-main-image {
+    width: 100%;
+    object-fit: contain;
+    max-height: 500px;
+}
+
+.game-purchase {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.game-purchase-box {
+    background-color: #16202d;
+    border-radius: 4px;
+    padding: 20px;
+}
+
+.game-purchase-box h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: normal;
+    color: #c6d4df;
+}
+
+.game-pricing {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.game-discount {
+    background-color: #4c6b22;
+    color: #a4d007;
+    padding: 2px 8px;
+    font-weight: bold;
+    border-radius: 3px;
+    margin-right: 10px;
+}
+
+.game-price {
+    color: #b8e6f2;
+    font-size: 24px;
+}
+
+.game-price.discounted {
+    display: flex;
+    flex-direction: column;
+}
+
+.game-price.discounted .original {
+    text-decoration: line-through;
+    color: #7193a6;
+    font-size: 14px;
+}
+
+.game-price.discounted .current {
+    color: #b8e6f2;
+    font-size: 24px;
+}
+
+.game-price.free {
+    color: #a4d007;
+}
+
+.game-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.game-tags {
+    background-color: #16202d;
+    border-radius: 4px;
+    padding: 15px;
+}
+
+.tag {
+    margin-bottom: 10px;
+    color: #7193a6;
+    font-size: 14px;
+}
+
+.game-description {
+    background-color: #16202d;
+    border-radius: 4px;
+    padding: 20px;
+}
+
+.game-description h2 {
+    margin-top: 0;
+    font-size: 18px;
+    font-weight: normal;
+    color: #c6d4df;
+    margin-bottom: 15px;
+}
+
+.description-text {
+    line-height: 1.6;
+    color: #c6d4df;
+    white-space: pre-line;
+}
+
+/* 无搜索结果样式 */
+.no-results {
+    text-align: center;
+    padding: 50px 0;
+    font-size: 18px;
+    color: #7193a6;
+}
+
+/* 登录/注册页面样式 */
+.auth-container {
+    max-width: 400px;
+    margin: 50px auto;
+    background-color: #1a2634;
+    border-radius: 4px;
+    padding: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.auth-title {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #c6d4df;
+    font-size: 24px;
+    font-weight: normal;
+}
+
+.auth-form .layui-form-item .layui-input {
+    background-color: #2a475e;
+    color: #fff;
+    border: none;
+}
+
+.auth-form .layui-form-item .layui-input::placeholder {
+    color: #7193a6;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.switch-form {
+    color: #66c0f4;
+}
+
+/* 购物车页面样式 */
+.cart-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cart-header {
+    padding-bottom: 15px;
+    border-bottom: 1px solid #3a506a;
+    margin-bottom: 20px;
+}
+
+.cart-item {
+    display: flex;
+    background-color: #16202d;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.cart-item-image {
+    width: 120px;
+    height: 60px;
+}
+
+.cart-item-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cart-item-details {
+    flex: 1;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart-item-title {
+    font-size: 16px;
+    color: #c6d4df;
+}
+
+.cart-item-price {
+    font-size: 16px;
+    color: #b8e6f2;
+}
+
+.cart-summary {
+    background-color: #16202d;
+    padding: 20px;
+    border-radius: 4px;
+    margin-top: 30px;
+}
+
+.cart-total {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .games-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+
+    .carousel-caption {
+        left: 5%;
+        bottom: 10%;
+        max-width: 80%;
+        padding: 15px;
+    }
+
+    .carousel-caption h2 {
+        font-size: 20px;
+    }
+
+    .header-navigation .menu-item {
+        padding: 0 10px;
+        font-size: 12px;
+    }
+
+    .search-box {
+        width: 150px;
+    }
+}
+
+@media (max-width: 576px) {
+    .games-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+
+    .carousel-caption {
+        padding: 10px;
+    }
+
+    .carousel-caption h2 {
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+
+    .carousel-caption p {
+        font-size: 12px;
+    }
+
+    .header-navigation {
+        display: none;
+    }
+
+    .store-nav-inner {
+        overflow-x: auto;
+    }
+}
